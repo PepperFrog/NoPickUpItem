@@ -16,7 +16,7 @@ public class EventHandlers
             if (Plugin.Singleton.Config.NoPickUpitItemTypes.Contains(ev.Pickup.Type)) 
             {
                 ev.Player.ShowHint(Plugin.Singleton.Config.MessageHint, Plugin.Singleton.Config.Duration);
-                ev.IsAllowed = Plugin.Singleton.Config.IsAllowdScientist;
+                ev.IsAllowed = Plugin.Singleton.Config.IsAllowd;
             }
         }
     }
