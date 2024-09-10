@@ -15,7 +15,7 @@ public class Config : IConfig
     [Description("Can the player take the item (if he can't then = false or if he can't = true)")]
     public bool IsAllowd { get; set; } = false;
 
-    public string ShowHint { get; set; } = "You can't take this item";
+    public string ShowHint { get; set; } = "<b>You can't take this item</b>";
     public float ShowHintDuration { get; set; } = 4f;
     
     [Description("The role that cannot take the item or items that were chosen")]
