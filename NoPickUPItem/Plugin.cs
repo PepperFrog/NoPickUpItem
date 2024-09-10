@@ -14,21 +14,21 @@ public class Plugin : Plugin<Config>
     public static Plugin Singleton;
     public static EventHandlers Handlers;
 
-    public void OnEnabled()
+    public override void OnEnabled()
     {
         Singleton = this;
         Handlers = new EventHandlers();
 
-        Exiled.Events.Handlers.Player.PickingUpItem += Handlers.OnPlayerPickUPItem;
+        Exiled.Events.Handlers.Player.SearchingPickup += Handlers.OnPlayerPickUpItem;
         base.OnEnabled();
     }
 
-    public void OnDisabled()
+    public override void OnDisabled()
     {
         Singleton = null;
         Handlers = null;
 
-        Exiled.Events.Handlers.Player.PickingUpItem -= Handlers.OnPlayerPickUPItem;
+        Exiled.Events.Handlers.Player.SearchingPickup -= Handlers.OnPlayerPickUpItem;
         base.OnDisabled();
     }
 }

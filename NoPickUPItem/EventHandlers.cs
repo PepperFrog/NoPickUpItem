@@ -9,14 +9,14 @@ using PluginAPI.Core.Attributes;
 namespace NoPickUPItem;
 public class EventHandlers
 {
-    public void OnPlayerPickUPItem(PickingUpItemEventArgs ev)
+    public void OnPlayerPickUpItem(SearchingPickupEventArgs ev)
     {
-        if (Plugin.Singleton.Config.RoleTypes.Contains(ev.Player.Role.Type))
+        if (ev.Player.Role != null && Plugin.Singleton.Config.DeniedRoles.Contains(ev.Player.Role))
         {
-            if (Plugin.Singleton.Config.NoPickUpitItemTypes.Contains(ev.Pickup.Type)) 
+            if (ev.Pickup != null && Plugin.Singleton.Config.NoPickUpItem.Contains(ev.Pickup.Type))
             {
-                ev.Player.ShowHint(Plugin.Singleton.Config.MessageHint, Plugin.Singleton.Config.Duration);
                 ev.IsAllowed = Plugin.Singleton.Config.IsAllowd;
+                ev.Player.ShowHint(Plugin.Singleton.Config.ShowHint, Plugin.Singleton.Config.ShowHintDuration);
             }
         }
     }
