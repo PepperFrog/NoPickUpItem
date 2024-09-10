@@ -1,4 +1,4 @@
-[![Github All Releases](https://img.shields.io/github/downloads/xRoier/WHLogs/total?color=blueviolet&style=for-the-badge)]()
+[![Github All Releases](https://img.shields.io/github/downloads/RomzyyTV/NoPickUpItem/total?color=blueviolet&style=for-the-badge)]()
 
 # No PickUP Item
 Makes it so that if a person has a certain role and wants to take a certain item and they are not authorized to take it then they will not be able to take it
