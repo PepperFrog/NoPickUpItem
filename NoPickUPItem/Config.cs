@@ -26,7 +26,7 @@ public class Config : IConfig
     { 
         ItemType.GunCrossvec
     };
-
+    
     public List<RoleTypeId> DeniedRoles { get; set; } = new List<RoleTypeId>()
     {
         RoleTypeId.Scientist
