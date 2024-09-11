@@ -16,7 +16,7 @@ public class Config : IConfig
     public bool IsAllowed { get; set; } = false;
     
     [Description("Message that appears when the player wants to take an item")]
-    public string ShowHint { get; set; } = "<b>You can't take this item</b>";
+    public string ShowHint { get; set; } = "<size=18><b>You can't take this item</size></b>";
     
     [Description("Duration of the message displayed")]
     public float ShowHintDuration { get; set; } = 4f;
