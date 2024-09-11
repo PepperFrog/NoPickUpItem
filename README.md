@@ -24,4 +24,4 @@ no_pick_u_p_item:
 
 **[EXILED](https://github.com/ExMod-Team/EXILED) must be installed for this to work.**
 
-Place the "Cassieauto.dll" file in your Plugins folder.
+Place the "NoPickUPItem.dll" file in your Plugins folder.
