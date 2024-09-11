@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using AdminToys;
 using Exiled.API.Features;
 using Exiled.API.Features.Pickups;
 using Exiled.Events.EventArgs.Player;
 using Exiled.Permissions;
+using MEC;
 using PlayerRoles;
 using PluginAPI.Core.Attributes;
 
@@ -15,9 +18,9 @@ public class EventHandlers
         {
             if (ev.Pickup != null && Plugin.Singleton.Config.NoPickUpItem.Contains(ev.Pickup.Type))
             {
-                ev.IsAllowed = Plugin.Singleton.Config.IsAllowd;
+                ev.IsAllowed = Plugin.Singleton.Config.IsAllowed;
                 ev.Player.ShowHint(Plugin.Singleton.Config.ShowHint, Plugin.Singleton.Config.ShowHintDuration);
             }
-        }
+        } 
     }
 }
